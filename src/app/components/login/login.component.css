@@ -33,12 +33,12 @@
 
 .section .container .left-side {
     width: 55%;
-    background-color: #040387;
+    background-color: #fff;
     height: 100%
 }
 
 .section .container .left-side .content {
-    color: #fff;
+    color: darkslategray;
     letter-spacing: 1px;
     padding: 10px 30px;
     text-align: center;
@@ -49,11 +49,16 @@
     font-size: 19px
 }
 
+.section .container .left-side .content h5 .unicomer {
+    color: #040387;
+}
+
 /**** Right side ****/
 
 .section .container .right-side {
+    flex-direction: column;
     width: 45%;
-    background-color: #fff;
+    background-color: #040387;
     height: 100%;
     padding: 20px;
     display: flex;
@@ -62,12 +67,14 @@
 }
 
 .section .container .right-side .forms {
-    padding-right: 20px;
+    padding: 20px;
+    margin: 20px;
     width: 100%
 }
 
 .section .container .right-side .forms label {
     font-size: 16px;
+    color: #fff;
 
 }
 
@@ -76,8 +83,6 @@
     height: 45px;
     border: none;
     margin-bottom: 10px;
-    padding: 0px 10px;
-    border: 2px solid #eee;
     transition: all 0.5s;
     background-color: #e8f0fe;
     border-radius: 3px;
@@ -87,13 +92,14 @@
 
 .section .container .right-side .forms input[type="submit"] {
     width: 100%;
-    background-color: #040387;
+    background-color: #fff;
     border-radius: 5px;
-    color: #fff;
+    color: #040387;
     letter-spacing: 1px;
     cursor: pointer;
     border: none;
     text-transform: uppercase
+    
 }
 
 .section .container .right-side .forms input[type="submit"]:hover {
@@ -101,7 +107,7 @@
 }
 
 .submit-button {
-    width: 110%
+    width: 100%
 }
 
 .section .container .right-side .forms input:focus {
@@ -147,6 +153,18 @@
     letter-spacing: 1px;
     font-size: 11px;
     cursor: pointer
+}
+
+.section .container .right-side .keyboard {
+    color: #fff;
+}
+
+.section .container .right-side .register {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 @media (max-width:750px) {
