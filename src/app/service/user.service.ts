@@ -7,10 +7,9 @@ import { User } from 'src/app/model/user.model';
   providedIn: 'root'
 })
 export class UserService {
-  
     //URL = environment.URL + 'User/';
   
-    URL = 'http://localhost:8080/User/';
+    URL = 'http://localhost:8080/user/';
     constructor(private httpClient: HttpClient) {}
   
     public usuarios(): Observable<User[]> {
