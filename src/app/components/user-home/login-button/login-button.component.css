@@ -1,12 +1,11 @@
 button {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
 .logged {
-    border: none;
-    background: transparent;
-
-    font-weight: 500;
-    color: #fff;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  color: #fff;
 }

@@ -11,14 +11,14 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  
 }
-
-.mat-icon {
-  
+.mat-icon{
+  color: #040387;
+  margin-right: 10px;
+}
+.mat-icon-menu{
   color: white;
   transform: scale(1);
-
 }
 
 .sidenav-close-button{
@@ -33,3 +33,5 @@
 .ng-star-inserted{
   background-color: none;
 }
+
+

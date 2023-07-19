@@ -2,6 +2,7 @@
   Login
 </button>
 
-<button class="round-button logged" type="button" (click)="onLogOut()" *ngIf="isLogged">
+<!--  cambiar q no sea un boton -->
+<button class="round-button logged" type="button" *ngIf="isLogged">
   {{user.nombre}} {{user.apellido}}
 </button>
