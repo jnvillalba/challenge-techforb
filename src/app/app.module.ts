@@ -7,6 +7,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginButtonComponent } from './components/user-home/login-button/login-button.component';
 import { FormsModule }   from '@angular/forms';
+import { interceptorProvider } from './service/interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { FormsModule }   from '@angular/forms';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
