@@ -1,18 +1,14 @@
 <div class="custom-mat-elevation-z8">
     <table class="custom-full-width-table" aria-label="Elements">
-      <thead>
-        <tr>
-          <th>Receptor</th>
-          <th>Monto</th>
-          <th>Fecha</th>
-          <th>Motivo</th>
-        </tr>
-      </thead>
+      
       <tbody>
         <tr>
-          <td>{{transaccion.usuarioDestinatario.nombre}} {{transaccion.usuarioDestinatario.apellido}}</td>
-          <td>{{transaccion.monto}}</td>
-          <td>{{transaccion.fecha}}</td>
+          <td>{{transaccion.usuarioDestinatario.nombre}} {{transaccion.usuarioDestinatario.apellido}} </td>
+          <td> $ {{transaccion.monto}}</td>
+          <td class="fecha-hora">
+            <span>{{convertirFecha(transaccion.fecha).fechaFormateada}}</span>
+            <small>{{convertirFecha(transaccion.fecha).horaFormateada}}</small>
+          </td>
           <td>{{transaccion.motivo}}</td>
         </tr>
       </tbody>

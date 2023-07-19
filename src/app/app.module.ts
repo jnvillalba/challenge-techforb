@@ -24,6 +24,7 @@ import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MatTableModule } from '@angular/material/table';
+import { StockComponent } from './components/stock/stock.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatTableModule } from '@angular/material/table';
     SidebarComponent,
     HomeComponent,
     TopBarComponent,
+    StockComponent,
     
   ],
   imports: [
