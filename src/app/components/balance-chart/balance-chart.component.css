@@ -1,0 +1,14 @@
+.chartContainer canvas {
+  max-height: 300px;
+  width: auto;
+}
+
+.chartContainer {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: inherit;
+}

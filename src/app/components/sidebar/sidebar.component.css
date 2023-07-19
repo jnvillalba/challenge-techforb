@@ -1,0 +1,35 @@
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 20%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+}
+
+.mat-icon {
+  
+  color: white;
+  transform: scale(1);
+
+}
+
+.sidenav-close-button{
+  border: none;
+  background: transparent;
+}
+
+.mat-toolbar{
+  display: flex !;
+  justify-content: space-between;
+}
+.ng-star-inserted{
+  background-color: none;
+}

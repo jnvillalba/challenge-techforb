@@ -1,0 +1,30 @@
+<mat-card class="container">
+  <mat-card class="dashboard">
+    <!--TARJETAS-->
+    <div class="container-tarjetas">
+      <mat-card class="text-inicio">Inicio</mat-card>
+      <app-credit-card
+        *ngFor="let tarjeta of user.tarjetas"
+        [tarjeta]="tarjeta"
+        [user]="{user}">
+      </app-credit-card>
+      ingresos egresos
+    </div>
+    <div class="container-bottom">
+      <div class="container-balance">
+        <mat-card class="text-balance">
+          Balance
+          <app-balance-chart></app-balance-chart>
+        </mat-card>
+      </div>
+      <!--TRANSACCIONES-->
+      <div class="container-transactions">
+        <mat-card class="text-transactions">Ultimas transacciones</mat-card>
+        <app-transactions
+          *ngFor="let transaccion of user.transaccionesSalientes"
+          [transaccion]="transaccion"
+        ></app-transactions>
+      </div>
+    </div>
+  </mat-card>
+</mat-card>

@@ -1,0 +1,29 @@
+<div class="tarjeta">
+  <div class="contenedor-arriba">
+    <div class="info-text">
+      Mi saldo
+      <div class="saldo-info">Balance </div>
+    </div>
+    <div class="circulo1">
+      <div class="circulo2"></div>
+    </div>
+  </div>
+  
+  <div class="numero-tarjeta">
+    {{ ocultarNumeroTarjeta(tarjeta.numero) }}
+  </div>
+
+  <div class="contenedor-info-abajo">
+    <div class="info-text">
+      Titular tarjeta
+      <div class="info-tarjeta">nombre apellido</div>
+    </div>
+
+    <div class="info-text">
+      Valida hasta
+      <div class="info-tarjeta">
+        {{convertirFecha(tarjeta.fechaVencimiento) }}
+      </div>
+    </div>
+  </div>
+</div>

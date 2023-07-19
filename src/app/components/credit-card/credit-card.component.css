@@ -1,0 +1,71 @@
+
+.tarjeta {
+    background-color: #252f69;
+    width: 18rem;
+    height: 10rem;
+    border-radius: 2rem;
+    color: #ffffff;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .tarjeta-2 {
+    background-color: #ffffff;
+    filter: opacity(0.5);
+    width: 18rem;
+    height: 10rem;
+    border-radius: 2rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    color: #252f69;
+    cursor: pointer;
+  }
+  
+  .info-text {
+    font-size: 0.7rem;
+  }
+  
+  .saldo-info {
+    font-size: 1.3rem;
+  }
+  
+  .numero-tarjeta {
+    margin-left: 40%;
+    font-size: 1.2rem;
+  }
+  
+  .contenedor-info-abajo {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .info-tarjeta {
+    font-size: 1rem;
+  }
+  
+  .contenedor-arriba {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .circulo1 {
+    background-color: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100vh;
+    position: relative;
+    filter: opacity(0.4);
+  }
+  
+  .circulo2 {
+    background-color: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100vh;
+    position: absolute;
+    filter: opacity(0.5);
+    right: 75%;
+  }
