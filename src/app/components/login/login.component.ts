@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errorMsj!: string;
-
+  /*podria ser obtenido por un service */
+  tiposDocumento = ['DNI', 'CEDULA', 'PASAPORTE', 'OTRO']; 
+  
   constructor(
     private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -28,7 +30,6 @@ export class LoginComponent implements OnInit {
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities()
     }
-    console.log(this.tipoDocumento)
   }
 
   onLogin(): void {

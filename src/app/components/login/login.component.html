@@ -12,8 +12,9 @@
 
           <div class="form-inputs">
             <label for="tipoDocumento">Tipo de documento</label>
-            <input type="text" id="tipoDocumento" name="tipoDocumento" [(ngModel)]="tipoDocumento" required/>
-            <!-- Esto podría ser un select en lugar de un input -->
+            <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="tipoDocumento" required>
+              <option *ngFor="let tipo of tiposDocumento" [value]="tipo">{{ tipo }}</option>
+            </select>
           </div>
           <div class="form-inputs">
             <label for="nroDocumento">Número de documento</label>
@@ -26,7 +27,7 @@
           
           <ul class="strength-list">
             <li>
-              <span class="list-group"> Errores </span>
+              <span class="error"> {{errorMsj}} </span>
             </li>
           </ul>
           <div class="submit-button"><input type="submit" /></div>
