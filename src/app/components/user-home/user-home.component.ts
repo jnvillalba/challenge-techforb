@@ -1,7 +1,6 @@
 import { UserService } from './../../service/user.service';
 import { User } from './../../model/user.model';
 import { Component, OnInit } from '@angular/core';
-import { Transaccion } from 'src/app/model/transaccion.model';
 import { TokenService } from 'src/app/service/token.service';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
@@ -12,7 +11,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 })
 export class UserHomeComponent implements OnInit {
 
-/** Based on the screen size, switch from standard to one column per row */
 cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
   map(({ matches }) => {
     if (matches) {
@@ -25,7 +23,7 @@ cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     }
 
    return {
-      columns: 4,
+      columns: 1,
       miniCard: { cols: 1, rows: 1 },
       chart: { cols: 2, rows: 2 },
       table: { cols: 4, rows: 4 },

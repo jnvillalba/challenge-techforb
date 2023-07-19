@@ -5,17 +5,21 @@ export class Tarjeta {
   numero: string;
   fechaVencimiento: Date;
   codigoSeguridad: string;
+  titular: string;
   user: User;
+
 
   constructor(
     numero: string,
     fechaVencimiento: Date,
     codigoSeguridad: string,
+    titular: string,
     user: User
   ) {
     this.numero = numero;
     this.fechaVencimiento = fechaVencimiento;
     this.codigoSeguridad = codigoSeguridad;
+    this.titular = titular;
     this.user = user;
   }
 

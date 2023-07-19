@@ -1,30 +1,30 @@
-<mat-card class="container">
-  <mat-card class="dashboard">
-    <!--TARJETAS-->
-    <div class="container-tarjetas">
-      <mat-card class="text-inicio">Inicio</mat-card>
-      <app-credit-card
-        *ngFor="let tarjeta of user.tarjetas"
-        [tarjeta]="tarjeta"
-        [user]="{user}">
-      </app-credit-card>
-      ingresos egresos
+<div class="grid-container">
+  <h1 class="mat-h1">Inicio</h1>
+  <!-- Credit Cards -->
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="300px">
+    <mat-grid-tile
+      *ngFor="let tarjeta of user.tarjetas"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-credit-card [tarjeta]="tarjeta"></app-credit-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <!-- Chart and Transactions -->
+  <div class="chart-transactions-container">
+    <div class="chart-container">
+      <mat-card class="text-balance">
+        Balance
+        <app-balance-chart></app-balance-chart>
+      </mat-card>
     </div>
-    <div class="container-bottom">
-      <div class="container-balance">
-        <mat-card class="text-balance">
-          Balance
-          <app-balance-chart></app-balance-chart>
-        </mat-card>
-      </div>
-      <!--TRANSACCIONES-->
-      <div class="container-transactions">
-        <mat-card class="text-transactions">Ultimas transacciones</mat-card>
-        <app-transactions
-          *ngFor="let transaccion of user.transaccionesSalientes"
-          [transaccion]="transaccion"
-        ></app-transactions>
-      </div>
+    <div class="transactions-container">
+      <mat-card class="text-transactions">Ultimas transacciones</mat-card>
+      <app-transactions
+        *ngFor="let transaccion of user.transaccionesSalientes"
+        [transaccion]="transaccion"
+      ></app-transactions>
     </div>
-  </mat-card>
-</mat-card>
+  </div>
+</div>
