@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   background-color: gainsboro;
-  
 }
 
 .grid-container > * {
@@ -56,7 +55,6 @@ mat-card {
   border-radius: 2rem;
 }
 
-
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .minicards-container {
@@ -84,7 +82,6 @@ mat-card {
 }
 
 @media screen and (max-width: 320px) {
-
   .text-transactions,
   .text-balance,
   .mat-h1 {

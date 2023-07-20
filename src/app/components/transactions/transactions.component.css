@@ -3,15 +3,22 @@
   flex-direction: column;
   align-items: flex-start;
 }
-
 .fecha-hora small {
   color: grey;
   font-size: 12px;
-
 }
 
-td {
-  margin-top: 5px;
-  margin-left: 50px;
-  margin-right: 50px;
+.transactions-table {
+  display: flex;
+  justify-content: center;
+}
+
+.table-layout {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-layout td {
+  text-align: center;
+  white-space: nowrap;
 }

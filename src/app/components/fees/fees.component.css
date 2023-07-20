@@ -1,17 +1,18 @@
 table {
-    width: 100%;
-    border-radius: 2rem !important;
+  width: 100%;
 }
-
+.mat-header-cell {
+  background: gainsboro;
+  border: none;
+  font-size: 15px;
+}
 .mat-cell,
 .mat-header-cell {
-    padding: 8px;
-    text-align: center;
-    vertical-align: middle;
-
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.mat-table{    
-    border-radius: 2rem;
-    overflow:hidden !important;
+.mat-table {
+  overflow: hidden !important;
 }

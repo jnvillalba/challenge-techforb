@@ -3,31 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginButtonComponent } from './components/user-home/login-button/login-button.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { CreditCardComponent } from './components/credit-card/credit-card.component';
 import { BalanceChartComponent } from './components/balance-chart/balance-chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MatTableModule } from '@angular/material/table';
 import { StockComponent } from './components/stock/stock.component';
 import { FeesComponent } from './components/fees/fees.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     TopBarComponent,
     StockComponent,
     FeesComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -58,10 +57,12 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatTableModule,MatCheckboxModule,
-    
+    MatTableModule,
+    MatCheckboxModule,
+    MatPaginatorModule
+
   ],
   providers: [interceptorProvider],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
