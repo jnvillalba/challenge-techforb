@@ -1,21 +1,53 @@
-
 * {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
 
+.section .container {
+    --sz: 10px;
+    /*** size ***/
+    --c0: #fff;
+    --c1: #5f73f1;
+    --c2: #4b5bc3;
+    --c3: #272F65;
+    --ts: 50%/ calc(var(--sz) * 12.8) calc(var(--sz) * 22);
+    background:
+      /*bottom border*/
+      conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from 120deg at 50% 86.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+      /*bottom dark border*/
+      conic-gradient(from 120deg at 50% 74%, var(--c0) 0 120deg, #fff0 0 360deg) var(--ts),
+      /*right border*/
+      conic-gradient(from 60deg at 60% 50%, var(--c1) 0 60deg, var(--c2) 0 120deg, #fff0 0 360deg) var(--ts),
+      /*left border*/
+      conic-gradient(from 180deg at 40% 50%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+      /*top dark border*/
+      conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from 0deg at 90% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from -90deg at 10% 35%, var(--c0) 0 90deg, #fff0 0 360deg) var(--ts),
+      /*top border*/
+      conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from -60deg at 50% 13.5%, var(--c1) 0 120deg, #fff0 0 360deg) var(--ts),
+      conic-gradient(from -60deg at 50% 41%, var(--c2) 0 60deg, var(--c3) 0 120deg, #fff0 0 360deg) var(--ts),
+      var(--c0);
+  }
+
+
 .section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
+
 
 .section .container {
     height: 100%;
     width: 100%;
-    background-color: #fff;
+
     position: relative;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -29,9 +61,10 @@
     display: flex;
 }
 
+
 .section .container .left-side {
     width: 55%;
-    background-color: #fff;
+    background: linear-gradient(45deg, transparent 0%, white 20%, white 80%, transparent 100%);
     height: 100%;
     display: flex;
     align-items: center;
@@ -80,7 +113,7 @@
 .section .container .right-side .form-inputs label {
     font-size: 16px;
     color: #fff;
-   
+
 }
 
 .section .container .right-side .forms input {
@@ -98,6 +131,7 @@
     transition: 0.2s;
     color: #fff;
 }
+
 .section .container .right-side .forms select {
     width: 100% !important;
     height: 45px;
@@ -111,7 +145,8 @@
     background: none;
     transition: 0.2s;
     color: #fff;
-    background-color: #040387;}
+    background-color: #040387;
+}
 
 .section .container .right-side .forms input[type="submit"] {
     width: 100%;
@@ -165,7 +200,7 @@ input:hover {
     font-size: 11px;
     color: #fff;
     letter-spacing: 1px;
-    
+
 }
 
 .section .container .right-side .keyboard {
