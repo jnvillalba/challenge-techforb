@@ -21,8 +21,8 @@ export class UserHomeComponent implements OnInit {
     "John Doe",                 
   );
 
-sender = new User( "John","Doe",0, [], [], [], 0)
-recipient = new User("Jane"," Smith",0, [], [], [], 0)
+sender = new User( "John","Doe",0, [], [], 0)
+recipient = new User("Jane"," Smith",0, [], [], 0)
 
  transaccion = new Transaccion(
   1000,                      
@@ -58,7 +58,7 @@ transaccion2 = new Transaccion(
   "Cancelado",               
 );
 
-  user: User = new User('', '', 0, [this.transaccion, this.transaccion2], [], [this.tarjeta], 0);
+  user: User = new User('', '', 0, [this.transaccion, this.transaccion2], [this.tarjeta], 0);
   constructor(
     public userService: UserService,
     private tokenService: TokenService

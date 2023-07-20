@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./login-button.component.css'],
 })
 export class LoginButtonComponent implements OnInit {
-  user: User = new User('', '', 0, [], [], [], 0);
+  user: User = new User('', '', 0, [], [], 0);
   isLogged = false;
 
   constructor(

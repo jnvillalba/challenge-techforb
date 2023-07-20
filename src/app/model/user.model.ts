@@ -6,8 +6,7 @@ export class User {
   nombre: string;
   apellido: string;
   nroDocumento: number;
-  transaccionesSalientes: Transaccion[];
-  transaccionesEntrantes: Transaccion[];
+  transacciones: Transaccion[];
   tarjetas: Tarjeta[];
   balance: number;
 
@@ -15,16 +14,14 @@ export class User {
     nombre: string,
     apellido: string,
     nroDocumento: number,
-    transaccionesSalientes: Transaccion[] = [],
-    transaccionesEntrantes: Transaccion[] = [],
+    transacciones: Transaccion[] = [],
     tarjetas: Tarjeta[] = [],
     balance: number
   ) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.nroDocumento = nroDocumento;
-    this.transaccionesSalientes = transaccionesSalientes;
-    this.transaccionesEntrantes = transaccionesEntrantes;
+    this.transacciones = transacciones;
     this.tarjetas = tarjetas;
     this.balance = balance;
   }
