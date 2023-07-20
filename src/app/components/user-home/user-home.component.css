@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: gainsboro;
-  height: 100%;
+  
 }
 
 .grid-container > * {
@@ -24,12 +24,16 @@
   margin: 10px;
   align-items: center;
 }
+.fees-container {
+  width: 90%;
+}
 
 .chart-transactions-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   margin: 5px;
+  width: 90%;
 }
 
 .chart-container,
@@ -80,6 +84,7 @@ mat-card {
 }
 
 @media screen and (max-width: 320px) {
+
   .text-transactions,
   .text-balance,
   .mat-h1 {
@@ -87,7 +92,16 @@ mat-card {
     margin-bottom: 0.3rem;
   }
 
+  .chart-transactions-container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+
   .grid-container {
-    grid-gap: 10px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 25px;
   }
 }
