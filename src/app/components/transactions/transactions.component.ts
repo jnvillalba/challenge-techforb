@@ -43,8 +43,8 @@ export class TransactionsComponent implements OnInit {
     return { fechaFormateada, horaFormateada };
   }
 
-  obtenerEstilosYIcono(motivo: string): { clase: string; icono: string } {
-    const esSaliente = motivo === 'varios';
+  obtenerEstilosYIcono(tipo: string): { clase: string; icono: string } {
+    const esSaliente = tipo === 'egreso';
     const clase = esSaliente ? 'saliente-transaction' : 'entrante-transaction';
     const icono = esSaliente ? 'arrow_upward' : 'arrow_downward';
 

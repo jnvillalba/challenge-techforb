@@ -1,26 +1,27 @@
-import { User } from "./user.model";
+import { User } from './user.model';
 
 export class Transaccion {
-    id?: number;
-    monto: number;
-    motivo: string;
-    fecha: Date;
-    usuarioRemitente: User;
-    usuarioDestinatario: User;
-  
-    constructor(
-      monto: number,
-      motivo: string,
-      fecha: Date,
-      usuarioRemitente: User,
-      usuarioDestinatario: User
-    ) {
-      
-      this.monto = monto;
-      this.motivo = motivo;
-      this.fecha = fecha;
-      this.usuarioRemitente = usuarioRemitente;
-      this.usuarioDestinatario = usuarioDestinatario;
-    }
+  id?: number;
+  monto: number;
+  tipo: string;
+  fecha: any;
+  usuarioRemitente: User;
+  usuarioDestinatario: User;
+  estado:string;
+
+  constructor(
+    monto: number,
+    tipo: string,
+    fecha: any,
+    usuarioRemitente: User,
+    usuarioDestinatario: User,
+    estado:string
+  ) {
+    this.monto = monto;
+    this.tipo = tipo;
+    this.fecha = fecha;
+    this.usuarioRemitente = usuarioRemitente;
+    this.usuarioDestinatario = usuarioDestinatario;
+    this.estado = estado;
   }
-  
+}
