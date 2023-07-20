@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatCheckboxModule } from '@angular/material/checkbox'; // Interface for the table data
+
 export interface PeriodicElement {
   montoTotal: number;
   position: number;
@@ -9,6 +9,8 @@ export interface PeriodicElement {
   fechaEmision: string;
   mensual: string;
   tasaInteres: string;
+  estado: string;
+  actions:any;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
@@ -19,14 +21,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
     fechaEmision: 'Marzo 25, 2022',
     mensual: '50.036',
     tasaInteres: '10%',
+    estado: 'Pagar',
+    actions:"",
   },
   {
     position: 2,
-    montoTotal: 800.0,
-    cuotas: 'Cuota 10-24',
-    fechaEmision: 'Marzo 25, 2022',
-    mensual: '50.036',
+    montoTotal: 500.0,
+    cuotas: 'Cuota 24-24',
+    fechaEmision: 'Marzo 25, 2021',
+    mensual: '30.000',
     tasaInteres: '10%',
+    estado: 'cancelado',
+    actions:"",
   },
 ];
 
@@ -43,6 +49,8 @@ export class FeesComponent implements OnInit {
     'fechaEmision',
     'mensual',
     'tasaInteres',
+    'estado',
+    'actions',
   ];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);

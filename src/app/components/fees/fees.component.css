@@ -1,11 +1,13 @@
 table {
   width: 100%;
 }
+
 .mat-header-cell {
   background: gainsboro;
   border: none;
   font-size: 15px;
 }
+
 .mat-cell,
 .mat-header-cell {
   padding: 8px;
@@ -15,4 +17,29 @@ table {
 
 .mat-table {
   overflow: hidden !important;
+}
+
+.btn-pay {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #252f69;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-pay:hover {
+  background-color: #5D95BE;
+}
+
+.more-button {
+  background-color: transparent;
+  border: none;
+  transform: rotate(90deg);
+}
+
+.more-button mat-icon {
+  transform: rotate(180deg);
+  vertical-align: middle;
 }

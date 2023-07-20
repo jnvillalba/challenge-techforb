@@ -1,21 +1,13 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation">
   <ng-container matColumnDef="select">
     <th mat-header-cell *matHeaderCellDef>
-      <mat-checkbox
-        (change)="$event ? toggleAllRows() : null"
-        [checked]="selection.hasValue() && isAllSelected()"
-        [indeterminate]="selection.hasValue() && !isAllSelected()"
-        [aria-label]="checkboxLabel()"
-      >
+      <mat-checkbox (change)="$event ? toggleAllRows() : null" [checked]="selection.hasValue() && isAllSelected()"
+        [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
       </mat-checkbox>
     </th>
     <td mat-cell *matCellDef="let row">
-      <mat-checkbox
-        (click)="$event.stopPropagation()"
-        (change)="$event ? selection.toggle(row) : null"
-        [checked]="selection.isSelected(row)"
-        [aria-label]="checkboxLabel(row)"
-      >
+      <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+        [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
       </mat-checkbox>
     </td>
   </ng-container>
@@ -44,10 +36,34 @@
     <td mat-cell *matCellDef="let element">{{ element.tasaInteres }}</td>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr
-    mat-row
-    *matRowDef="let row; columns: displayedColumns"
-    (click)="selection.toggle(row)"
-  ></tr>
+  <!-- Columna para el botón de estado -->
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button class="btn-pay">{{ element.estado }}</button>
+    </td>
+  </ng-container>
+
+  <!-- Nueva columna para el botón con menú desplegable -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item>Ver Mas</button>
+        <button mat-menu-item>Borrar</button>
+      </mat-menu>
+    </td>
+  </ng-container>
+
+  <!-- ... (columnas previas) ... -->
+
+  <!-- Nueva columna añadida a la fila de encabezado (matHeaderRowDef) -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+
+  <!-- Nueva columna añadida a cada fila de la tabla (matRowDef) -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" (click)="selection.toggle(row)">
+  </tr>
 </table>
