@@ -41,7 +41,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HomeComponent,
     TopBarComponent,
     StockComponent,
-
+    FeesComponent,
+    
   ],
   imports: [
     BrowserModule,

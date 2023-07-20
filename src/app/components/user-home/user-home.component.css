@@ -52,6 +52,7 @@ mat-card {
   border-radius: 2rem;
 }
 
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .minicards-container {

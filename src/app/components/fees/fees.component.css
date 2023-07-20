@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    border-radius: 2rem !important;
+}
+
+.mat-cell,
+.mat-header-cell {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.mat-table{
+    border-radius: 2rem !important;
+}
