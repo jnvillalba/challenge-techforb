@@ -42,4 +42,24 @@ export class TransactionsComponent implements OnInit {
 
     return { fechaFormateada, horaFormateada };
   }
+
+  obtenerEstilosYIcono(motivo: string): { clase: string; icono: string } {
+    const esSaliente = motivo === 'varios';
+    const clase = esSaliente ? 'saliente-transaction' : 'entrante-transaction';
+    const icono = esSaliente ? 'arrow_upward' : 'arrow_downward';
+
+    return { clase, icono };
+  }
+  getTextColor(estado: string): string {
+    switch (estado) {
+      case 'completado':
+        return '#4BA38D'; 
+      case 'cancelado':
+        return '#EC595B'; 
+      case 'pendiente':
+        return 'grey'; 
+      default:
+        return 'black'; 
+    }
+  }
 }

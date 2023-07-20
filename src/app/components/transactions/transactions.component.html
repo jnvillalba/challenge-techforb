@@ -1,16 +1,24 @@
 <div class="transactions-table">
-    <table class="table-layout" aria-label="Elements">
-      <tbody>
-        <tr>
-          <td>{{transaccion.usuarioDestinatario.nombre}} {{transaccion.usuarioDestinatario.apellido}} </td>
-          <td> $ {{transaccion.monto}}</td>
-          <td class="fecha-hora">
-            <span>{{convertirFecha(transaccion.fecha).fechaFormateada}}</span>
-            <small>{{convertirFecha(transaccion.fecha).horaFormateada}}</small>
-          </td>
-          <td>{{transaccion.motivo}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <table class="table-layout" aria-label="Elements">
+    <tbody>
+      <tr>
+        <td [ngClass]="obtenerEstilosYIcono(transaccion.motivo).clase">
+          <div class="circle">
+            <mat-icon>{{ obtenerEstilosYIcono(transaccion.motivo).icono }}</mat-icon>
+          </div>
+        </td>
+        <td>{{transaccion.usuarioDestinatario.nombre}} {{transaccion.usuarioDestinatario.apellido}}</td>
+        <td >
+          $ {{transaccion.monto}}
+        </td>
+        <td class="fecha-hora">
+          <span>{{convertirFecha(transaccion.fecha).fechaFormateada}}</span>
+          <small>{{convertirFecha(transaccion.fecha).horaFormateada}}</small>
+        </td>
+        <td [style.color]="getTextColor(transaccion.estado)">
+          {{transaccion.estado}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

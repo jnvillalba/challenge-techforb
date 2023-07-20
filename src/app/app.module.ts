@@ -28,6 +28,8 @@ import { StockComponent } from './components/stock/stock.component';
 import { FeesComponent } from './components/fees/fees.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,8 +61,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatTableModule,
     MatCheckboxModule,
-    MatPaginatorModule
-
+    MatPaginatorModule,
+    NgxPaginationModule,
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
