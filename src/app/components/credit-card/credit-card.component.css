@@ -1,7 +1,7 @@
 
 .tarjeta {
     background-color: #252f69;
-    width: 18rem;
+    width: 14rem;
     height: 10rem;
     border-radius: 2rem;
     color: #ffffff;
@@ -11,19 +11,6 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  .tarjeta-2 {
-    background-color: #ffffff;
-    filter: opacity(0.5);
-    width: 18rem;
-    height: 10rem;
-    border-radius: 2rem;
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    color: #252f69;
-    cursor: pointer;
-  }
-  
   .info-text {
     font-size: 0.7rem;
   }
@@ -34,7 +21,7 @@
   
   .numero-tarjeta {
     margin-left: 40%;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   
   .contenedor-info-abajo {

@@ -25,6 +25,8 @@ import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MatTableModule } from '@angular/material/table';
 import { StockComponent } from './components/stock/stock.component';
+import { FeesComponent } from './components/fees/fees.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { StockComponent } from './components/stock/stock.component';
     HomeComponent,
     TopBarComponent,
     StockComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ import { StockComponent } from './components/stock/stock.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatTableModule,
+    MatTableModule,MatCheckboxModule,
     
   ],
   providers: [interceptorProvider],

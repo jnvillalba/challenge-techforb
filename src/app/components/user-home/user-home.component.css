@@ -1,8 +1,28 @@
 .grid-container {
-  display: grid;
-  grid-gap: 15px;
-  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gainsboro;
   height: 100%;
+}
+
+.grid-container > * {
+  padding: 10px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 15px;
+  align-self: flex-start;
+}
+
+.minicards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 10px;
+  align-items: center;
 }
 
 .chart-transactions-container {
@@ -17,12 +37,6 @@
   grid-column: span 1;
 }
 
-.mat-h1 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin: 1rem;
-  position: absolute;
-}
 .text-transactions {
   font-weight: 500;
   font-size: 1.2rem;
@@ -40,8 +54,14 @@ mat-card {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
+  .minicards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .minicards-container > * {
+    margin: 10px;
   }
 
   .chart-transactions-container {

@@ -7,8 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CreditCardComponent implements OnInit {
   @Input() tarjeta: any; 
-  @Input() user: any;
-  @Input() numero: any;
+  @Input() balance: any;
   constructor() { }
   
 

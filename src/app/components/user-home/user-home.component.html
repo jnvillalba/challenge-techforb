@@ -1,15 +1,11 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Inicio</h1>
-
-  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="300px">
-    <mat-grid-tile  [colspan]="(cardLayout | async)?.miniCard?.cols"
-      [rowspan]="(cardLayout | async)?.miniCard?.rows">
-      <app-credit-card *ngFor="let tarjeta of user.tarjetas" [tarjeta]="tarjeta"></app-credit-card>
-      <app-stock></app-stock>
-    </mat-grid-tile>
-  </mat-grid-list>
-
-
+  <h1 class="title">Inicio</h1>
+  <div class="minicards-container">
+    <app-credit-card *ngFor="let tarjeta of user.tarjetas" [tarjeta]="tarjeta"
+      [balance]="user.balance"></app-credit-card>
+    <app-stock titulo="Ingresos" balance="45,741"></app-stock>
+    <app-stock titulo="Egresos" balance="32,123"></app-stock>
+  </div>
   <div class="chart-transactions-container">
     <div class="chart-container">
       <mat-card class="text-balance">
