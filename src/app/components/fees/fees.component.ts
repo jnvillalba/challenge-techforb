@@ -31,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     fechaEmision: 'Marzo 25, 2021',
     mensual: '30.000',
     tasaInteres: '10%',
-    estado: 'cancelado',
+    estado: 'Cancelado',
     actions:"",
   },
 ];

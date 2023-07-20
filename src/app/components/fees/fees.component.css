@@ -43,3 +43,22 @@ table {
   transform: rotate(180deg);
   vertical-align: middle;
 }
+
+@media (max-width: 600px) {
+  .mat-header-cell,
+  .mat-cell {
+    padding: 2px; 
+    font-size: 10px; 
+  }
+  
+  .btn-pay {
+    padding: 8px 8px; 
+  }
+  
+  .more-button {
+    display: inline-block;
+    padding: 4px;
+  }
+
+
+}

@@ -52,11 +52,11 @@ export class TransactionsComponent implements OnInit {
   }
   getTextColor(estado: string): string {
     switch (estado) {
-      case 'completado':
+      case 'Completado':
         return '#4BA38D'; 
-      case 'cancelado':
+      case 'Cancelado':
         return '#EC595B'; 
-      case 'pendiente':
+      case 'Pendiente':
         return 'grey'; 
       default:
         return 'black'; 

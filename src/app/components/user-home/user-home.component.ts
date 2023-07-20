@@ -38,7 +38,7 @@ recipient = new User("Jane"," Smith",0, [], [], [], 0)
     ],  
   this.sender,                    
   this.recipient,
-  "pendiente",               
+  "Pendiente",               
 );
 
 transaccion2 = new Transaccion(
@@ -55,7 +55,7 @@ transaccion2 = new Transaccion(
     ],  
   this.sender,                    
   this.recipient,
-  "cancelado",               
+  "Cancelado",               
 );
 
   user: User = new User('', '', 0, [this.transaccion, this.transaccion2], [], [this.tarjeta], 0);
