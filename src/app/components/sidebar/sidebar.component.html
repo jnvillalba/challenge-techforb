@@ -50,17 +50,36 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button class="sidenav-close-button"
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon class="mat-icon-menu" aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
+    <mat-toolbar color="primary" class="custom-toolbar">
+      <div class="toolbar-left">
+        <button class="sidenav-close-button"
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon class="mat-icon-menu" aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        
+      </div>
+    
+      <div class="toolbar-center">
+        <div class="search-bar">
+          <button class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#757575" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.77 0 3.37-.72 4.52-1.88l.27.28v.79l5 4.99L20.49 20l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+            </svg>
+          </button><input type="text" class="search-input" placeholder="Buscar...">
+  
+        </div>
+      </div>
+    
+      <div class="toolbar-right">
         <app-top-bar></app-top-bar>
+      </div>
     </mat-toolbar>
     <app-user-home></app-user-home>
   </mat-sidenav-content>
