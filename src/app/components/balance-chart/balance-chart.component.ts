@@ -11,7 +11,7 @@ export class BalanceChartComponent {
   public barChartPlugins = [];
 
   public barChartData: ChartConfiguration<'bar'>['data'] = {
-    labels: ['Lun', 'Mar', 'Jue', 'Vier', 'Sab', 'Dom'],
+    labels: ['Lun', 'Mar','Mie', 'Jue', 'Vie', 'Sab', 'Dom'],
     datasets: [
       {
         data: [70, 45, 25, 45, 25, 72,55],
