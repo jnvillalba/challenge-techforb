@@ -16,12 +16,12 @@
 
 .table-layout {
   table-layout: fixed;
-  width: 100%;
+  
 }
 
 .table-layout td {
   text-align: center;
-  white-space: nowrap;
+  padding: 5px;
 }
 
 .circle {
@@ -46,4 +46,8 @@
 
 .entrante-transaction .circle {
   background-color: #4BA38D;
+}
+
+.estado{
+  font-size: 10px;
 }

@@ -15,7 +15,7 @@
           <span>{{convertirFecha(transaccion.fecha).fechaFormateada}}</span>
           <small>{{convertirFecha(transaccion.fecha).horaFormateada}}</small>
         </td>
-        <td [style.color]="getTextColor(transaccion.estado)">
+        <td class="estado" [style.color]="getTextColor(transaccion.estado)">
           {{transaccion.estado}}
         </td>
       </tr>
