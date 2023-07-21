@@ -1,6 +1,6 @@
 # ChallengeTechforb
 
-Nota: Los componentes fueron hardcodeados, pero en caso de levantar el backend estos cambiara por los dinamicos
+Nota: Los componentes fueron hardcodeados, pero en caso de levantar el backend estos cambiaran por los dinamicos
 
 ## Development server
 
