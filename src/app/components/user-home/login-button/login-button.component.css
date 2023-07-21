@@ -1,7 +1,7 @@
 .round-button {
   border: 1px solid #fff;
   color: #fff;
-  padding: 0.3rem 0.4rem;
+
   border-radius: 100vh;
   margin-right: 0.5rem;
   cursor: pointer;
@@ -13,7 +13,8 @@
 }
 
 .round-button > div {
-  padding: 2px;
+  padding: 5px;
+  font-size: 10px;
 }
 
 .logged {
@@ -35,4 +36,5 @@
     margin: 0px;
     display: none;
   }
+  
 }

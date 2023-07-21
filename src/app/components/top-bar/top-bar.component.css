@@ -26,12 +26,20 @@
   margin-right: 0.5rem;
   cursor: pointer;
   background-color: transparent;
+  
 }
 
 @media screen and (max-width: 768px) {
   .navbar {
     gap: 0.5rem;
   }
+  .mat-icon {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
 
   .navbar-search {
     display: flex;
@@ -58,5 +66,7 @@
     padding: 0rem 0rem;
     margin-right: 0.3rem;
     background-color: transparent;
+    text-align: center;
+ 
   }
 }

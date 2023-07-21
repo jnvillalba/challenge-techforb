@@ -74,8 +74,7 @@ mat-card {
 
 @media screen and (max-width: 480px) {
   .text-transactions,
-  .text-balance,
-  .mat-h1 {
+  .text-balance{
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -83,18 +82,18 @@ mat-card {
     width: auto;
     
   }
- 
-  
+
 }
 
 @media screen and (max-width: 320px) {
   .text-transactions,
-  .text-balance,
-  .mat-h1 {
+  .text-balance{
     font-size: 0.8rem;
     margin-bottom: 0.3rem;
   }
-
+  .title{
+    margin-left: 35px !important;
+  }
   .chart-transactions-container {
     display: grid;
     align-content: center;
