@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.tipoDocumento,parseInt(this.nroDocumento), this.password)
        this.authService.login(this.loginUsuario).subscribe(data => {
-        console.log(data)
+        
           this.isLogged = true
           this.isLogginFail = false
           this.tokenService.setToken(data.token)

@@ -70,6 +70,7 @@ transaccion2 = new Transaccion(
 
   ngOnInit(): void {
     this.cargarPersona();
+    this.cargarTransacciones();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -81,6 +82,18 @@ transaccion2 = new Transaccion(
     this.userService.details(1).subscribe(
       (data) => {
         this.user = data;
+
+      },
+      (error) => {
+        console.log('Error al cargar el usuario', error);
+      }
+    );
+  }
+
+  cargarTransacciones() {
+    this.userService.transactions(1).subscribe(
+      (data) => {
+        this.user.transacciones = data;
       },
       (error) => {
         console.log('Error al cargar el usuario', error);
