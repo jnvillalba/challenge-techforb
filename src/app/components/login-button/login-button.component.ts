@@ -36,6 +36,7 @@ export class LoginButtonComponent implements OnInit {
   login() {
     this.router.navigate(['/login']);
   }
+  
   cargarPersona() {
     this.userService.details(1).subscribe(
       (data) => {
