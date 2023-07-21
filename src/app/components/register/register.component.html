@@ -1,0 +1,50 @@
+<div class="section">
+    <div class="container">
+        <div class="form">
+            <div class="left-side">
+                <div class="logo">LOGO</div>
+                <form (ngSubmit)="onSubmit()" class="forms" novalidate>
+                    <div class="form-inputs">
+                        <label for="tipoDocumento">Tipo de documento</label>
+                        <select id="tipoDocumento" name="tipoDocumento" [(ngModel)]="nuevoUsuario.tipoDocumento"
+                            required>
+                            <option *ngFor="let tipo of tiposDocumento" [value]="tipo">
+                                {{ tipo }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-inputs">
+                        <label for="nroDocumento">Número de documento</label>
+                        <input type="text" id="nroDocumento" name="nroDocumento" [(ngModel)]="nuevoUsuario.nroDocumento"
+                            required />
+                    </div>
+                    <div class="form-inputs">
+                        <label for="password">Clave</label>
+                        <input id="password" class="password-input" type="password" name="password"
+                            [(ngModel)]="nuevoUsuario.password" required />
+                    </div>
+
+                    <ul class="strength-list">
+                        <li>
+                            <span class="error"> {{ errorMsj }} </span>
+                        </li>
+                    </ul>
+                    <div class="submit-button">
+                        <input type="submit" value="Registrarse" />
+                    </div>
+                </form>
+
+                <div class="register">
+                    ¿Ya tienes cuenta?
+                    <a class="highlight" href="/login">Inicia sesión aquí</a>
+                </div>
+
+            </div>
+            <div class="right-side">
+                <div class="content">
+                    <h5>Bienvenidos a <span class="unicomer">Unicomer</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -28,6 +28,7 @@ import { StockComponent } from './components/stock/stock.component';
 import { FeesComponent } from './components/fees/fees.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     TopBarComponent,
     StockComponent,
     FeesComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

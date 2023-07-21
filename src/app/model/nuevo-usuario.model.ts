@@ -3,4 +3,5 @@ export class NuevoUsuario {
   nroDocumento!: number;
   password!: string;
   authorities!: string[];
+  
 }
